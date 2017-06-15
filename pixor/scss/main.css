@@ -1,0 +1,31 @@
+body {
+  background-image: url(/pixor/images/background.jpg);
+  background-size: cover; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 980px; }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 980px; }
+
+.loginbox {
+  float: left;
+  margin-top: 50px;
+  background-color: rgba(3, 3, 3, 0.2);
+  padding: 20px; }
+
+.lightbox {
+  background-color: rgba(100, 100, 100, 0.8);
+  color: white;
+  border-radius: 0; }
+
+.backlight {
+  background-color: rgba(255, 255, 255, 0.02); }
+
+/*# sourceMappingURL=main.css.map */

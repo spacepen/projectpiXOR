@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xor</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="scss/main.css" rel="stylesheet">
+    <link rel="icon" href="images/logo1.png">
+    <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+<header>
+    
+</header>
+<main>
+    <div class="loginbox">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="button">Login</button>
+        <!-- GetAccount Button Lightbox Class: button-->
+        <button type="button"  data-toggle="modal" data-target="#myModal">
+            Get Account
+        </button>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <!--Class: Lightbox-->
+            <div class="modal-content lightbox">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Get Account</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="UserName" placeholder="UserName" name="UserName"><br><br>
+                    <input id="Email" placeholder="Email" name="Email"><br><br>
+
+                    <!--Geschlecht-->
+                    <label for='männl'>männlich</label>
+                    <input type="radio" id="männl" name="geschlecht" value="m">
+                    <label for='männl'>weiblich</label>
+                    <input type="radio" id="weibl" name="geschlecht" value="w"><br><br>
+                    <p>Choose Password</p>
+                    <input type="password" id="password" placeholder="Password"><br><br>
+                    <input type="password" id="password" placeholder="PasswordAgain">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal">Close</button>
+                    <button type="button" >Get Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+
+</body>
+</html>
