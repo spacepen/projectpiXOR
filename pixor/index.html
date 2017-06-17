@@ -8,27 +8,22 @@
     <link rel="icon" href="images/logo1.png">
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
-
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Add core.js & jQuery Link for dynamic backgrounds -->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/core.js"></script>
 </head>
 <body>
 <header>
-    <div class="centerheader">
-        <img src="images/logo1.png" class="logo">
-        <img src="images/logo2.png" class="logo2">
-
-        <!-- Share icons -->
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-google"></a>
+    <div class="width">
+        <img class="logo pixor" src="images/logo1.png">
+        <img class="logo " src="images/logo2.png">
+        <div class="socialmedia">
+            <img class="social" src="images/SocialMedia/facebook.png">
+            <img class="social" src="images/SocialMedia/twitter.png">
+            <img class="social" src="images/SocialMedia/googleplus.png">
+        </div>
     </div>
 </header>
 <main>
+    <div class="width">
     <div class="loginbox">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -44,14 +39,14 @@
             Get Account
         </button>
     </div>
-
+    </div>
     <!-- Lightbox -->
     <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <!--Class: Lightbox-->
             <div class="modal-content lightbox">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Get Account</h4>
                 </div>
                 <div class="modal-body">
@@ -77,9 +72,7 @@
     </div>
 </main>
 <footer>
-    <div>
-        © 2017 XOR, All Rights Reserved
-    </div>
+    © All rights reserved
 </footer>
 
 </body>
