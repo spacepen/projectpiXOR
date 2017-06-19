@@ -91,4 +91,7 @@ footer {
 .backlight {
   background-color: rgba(255, 255, 255, 0.02); }
 
+.form-control {
+  width: 200px; }
+
 /*# sourceMappingURL=main.css.map */
