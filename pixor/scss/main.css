@@ -62,7 +62,7 @@ main {
 
 footer {
   background-color: rgba(255, 255, 255, 0.3);
-  color: #333333;
+  color: black;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -76,7 +76,7 @@ footer {
   float: left;
   margin-top: 50px;
   margin-left: 20px;
-  background-color: rgba(3, 3, 3, 0.3);
+  background-color: rgba(3, 3, 3, 0.5);
   color: #333333;
   padding: 20px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); }
