@@ -9,9 +9,9 @@ $(document).ready(function(){
     var header = $('body');
 
     var backgrounds = new Array(
-        'url(/projectpixor/pixor/images/background.jpg)'
-        , 'url(/projectpixor/pixor/images/background2.jpg)'
-        , 'url(/projectpixor/pixor/images/background3.jpg)'
+        'url(/aProject/pixor/images/background.jpg)'
+        , 'url(/aProject/pixor/images/background2.jpg)'
+        , 'url(/aProject/pixor/images/background3.jpg)'
     );
 
     var current = 0;

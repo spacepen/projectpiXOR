@@ -11,6 +11,7 @@
     <script src="js/core.js"></script>
 </head>
 <body>
+
 <header>
     <div class="width">
         <img class="logo pixor" src="images/logo1.png">
@@ -28,15 +29,18 @@
         </div>
     </div>
 </header>
+
 <main>
     <div class="width">
-    <div class="loginbox">
+
+        <!--Loginbox-->
+        <div class="loginbox">
         <div class="form-group">
-            <label for="exampleInputEmail1" class="x">Email</label>
+            <label for="exampleInputEmail1"></label>
             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1" class="x">Password</label>
+            <label for="exampleInputPassword1"></label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <button type="button">Login</button>
@@ -45,10 +49,9 @@
             Get Account
         </button>
     </div>
-    </div>
-    <!-- Lightbox -->
-    <!-- just a test. lol -->
-    <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+        <!-- Lightbox -->
+        <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <!--Class: Lightbox-->
             <div class="modal-content lightbox">
@@ -56,26 +59,24 @@
                     <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Get Account</h4>
                 </div>
-                <div class="modal-body">
-                    <input id="UserName" placeholder="UserName" name="UserName" class="form-control"><br><br>
-                    <input id="Email" placeholder="Email" name="Email" class="form-control"><br><br>
+                <form action="?register=1" method="post">
+                    <<form action="?register=1" method="post">
+                        E-Mail:<br>
+                        <input type="email" size="40" maxlength="250" name="email"><br><br>
 
-                    <!--Geschlecht-->
-                    <label for='männl'>männlich</label>
-                    <input type="radio" id="männl" name="geschlecht" value="m">
-                    <label for='männl'>weiblich</label>
-                    <input type="radio" id="weibl" name="geschlecht" value="w"><br><br>
-                    <p>Choose Password</p>
-                    <input type="password" id="password1" placeholder="Password" class="form-control"><br><br>
-                    <input type="password" id="password2" placeholder="PasswordAgain" class="form-control">
+                        Dein Passwort:<br>
+                        <input type="password" size="40"  maxlength="250" name="passwort"><br>
 
-                </div>
-                <div class="modal-footer">
-                    <button class="y" type="button" data-dismiss="modal">Close</button>
-                    <button class="y" type="button" >Get Account</button>
-                </div>
+                        Passwort wiederholen:<br>
+                        <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
+
+                        <input type="submit" value="Abschicken">
+                    </form>
+                </form>
+
             </div>
         </div>
+    </div>
     </div>
 </main>
 <footer>
