@@ -6,11 +6,12 @@
     <title>anwendung</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
-
+    <link href="scss/anwendung.css" rel="stylesheet">
     <link rel="icon" href="images/logo1.png">
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/core.js"></script>
+
 </head>
 <body>
 <header>
@@ -34,7 +35,7 @@
 <?php
 include 'includes/dbconnect.php';
 ?>
-<p>
+<p id="question">
     <?php
         $sql = "SELECT * FROM question";
         $res = $pdo->query($sql);
@@ -50,7 +51,8 @@ include 'includes/dbconnect.php';
 <?php
 include 'includes/dbconnect.php';
 ?>
-<button type="button" ><?php
+<button type="button" id="button1" name="answer1" onclick="this.style.display='none'; buttonClick();" >
+    <?php
     $sql = "SELECT * FROM question";
     $res = $pdo->query($sql);
 
@@ -64,7 +66,7 @@ include 'includes/dbconnect.php';
 <?php
 include 'includes/dbconnect.php';
 ?>
-<button type="button" >
+<button type="button" id="button2" name="answer2" onclick="this.style.display='none'; buttonClick();" >
     <?php
     $sql = "SELECT * FROM question";
     $res = $pdo->query($sql);
@@ -76,6 +78,9 @@ include 'includes/dbconnect.php';
     }
     $pdo->close();
     ?>
+</button>
+<button type="button" id="button3">
+    continue
 </button>
 </main>
 <footer>

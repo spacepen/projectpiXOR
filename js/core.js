@@ -9,9 +9,9 @@ $(document).ready(function(){
     var header = $('body');
 
     var backgrounds = new Array(
-        'url(/aProject/pixor/images/background.jpg)'
-        , 'url(/aProject/pixor/images/background2.jpg)'
-        , 'url(/aProject/pixor/images/background3.jpg)'
+        'url(/projectpixor/images/background.jpg)'
+        , 'url(/projectpixor/images/background2.jpg)'
+        , 'url(/projectpixor/images/background3.jpg)'
     );
 
     var current = 0;
@@ -25,3 +25,16 @@ $(document).ready(function(){
     header.css('background-image', backgrounds[0]);
 
 });
+
+
+
+
+
+
+function buttonClick()
+{
+        document.getElementById('button1').style.display = 'none';
+        document.getElementById('button2').style.display = 'none';
+        document.getElementById('button3').style.visibility = 'visible';
+        document.getElementById('question').style.visibility = 'hidden';
+}
