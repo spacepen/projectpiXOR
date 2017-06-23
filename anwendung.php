@@ -32,56 +32,56 @@
     </div>
 </header>
 <main>
-<?php
-include 'includes/dbconnect.php';
-?>
-<p id="question">
-    <?php
-        $sql = "SELECT * FROM question";
+
+    <p id="question">
+        <?php
+            include 'includes/dbconnect.php';
+            $sql = "SELECT * FROM question WHERE questioniD='1'";
+            $res = $pdo->query($sql);
+
+            if($res->num_rows > 0) {
+                while($i = $res->fetch_assoc()) {
+                    echo  $i["questionName"];
+                }
+            }
+            $pdo->close();
+        ?>
+    </p>
+
+
+
+    <button type="submit" id="button1" name="answer1" onclick= "buttonClick();" action="inserts/insertUserQuestionA.php" method="post">
+        <?php
+        include 'includes/dbconnect.php';
+        $sql = "SELECT * FROM question WHERE questionID='1'";
         $res = $pdo->query($sql);
 
         if($res->num_rows > 0) {
             while($i = $res->fetch_assoc()) {
-                echo  $i["QName"];
+                echo  $i["answerA"];
             }
         }
         $pdo->close();
-    ?>
-</p>
-<?php
-include 'includes/dbconnect.php';
-?>
-<button type="button" id="button1" name="answer1" onclick="this.style.display='none'; buttonClick();" >
-    <?php
-    $sql = "SELECT * FROM question";
-    $res = $pdo->query($sql);
 
-    if($res->num_rows > 0) {
-        while($i = $res->fetch_assoc()) {
-            echo  $i["AnswerA"];
-        }
-    }
-    $pdo->close();
-    ?></button>
-<?php
-include 'includes/dbconnect.php';
-?>
-<button type="button" id="button2" name="answer2" onclick="this.style.display='none'; buttonClick();" >
-    <?php
-    $sql = "SELECT * FROM question";
-    $res = $pdo->query($sql);
+        ?></button>
 
-    if($res->num_rows > 0) {
-        while($i = $res->fetch_assoc()) {
-            echo  $i["AnswerB"];
+    <button type="button" id="button2" name="answer2" onclick="buttonClick();" action="inserts/insertUserQuestionB.php" method="post">
+        <?php
+        include 'includes/dbconnect.php';
+        $sql = "SELECT * FROM question WHERE questionID='1'";
+        $res = $pdo->query($sql);
+
+        if($res->num_rows > 0) {
+            while($i = $res->fetch_assoc()) {
+                echo  $i["answerB"];
+            }
         }
-    }
-    $pdo->close();
-    ?>
-</button>
-<button type="button" id="button3">
-    continue
-</button>
+        $pdo->close();
+        ?>
+    </button>
+    <button type="button" id="button3"; onclick="continuer();">
+        Continue
+    </button>
 </main>
 <footer>
     <dfn>© XOR, All rights reserved</dfn>
