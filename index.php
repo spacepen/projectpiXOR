@@ -60,7 +60,7 @@
                     <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Get Account</h4>
                 </div>
-                <form action="?register=1" method="post">
+                <form action="insertNewUser.php" method="post">
                     <<form action="?register=1" method="post">
                         E-Mail:<br>
                         <input type="email" size="40" maxlength="250" name="email"><br><br>

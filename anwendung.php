@@ -36,47 +36,27 @@
     <p id="question">
         <?php
             include 'includes/dbconnect.php';
-            $sql = "SELECT * FROM question WHERE questioniD='1'";
-            $res = $pdo->query($sql);
+            $inhalt="questionName";
+            $counter=2;//das ding muss durchzählen
+            include 'includes/questionDB.php';
 
-            if($res->num_rows > 0) {
-                while($i = $res->fetch_assoc()) {
-                    echo  $i["questionName"];
-                }
-            }
-            $pdo->close();
         ?>
     </p>
 
 
-
-    <button type="submit" id="button1" name="answer1" onclick= "buttonClick();" action="inserts/insertUserQuestionA.php" method="post">
+    <button type="submit" id="button1" name="answer1" onclick= "buttonClick();">
         <?php
         include 'includes/dbconnect.php';
-        $sql = "SELECT * FROM question WHERE questionID='1'";
-        $res = $pdo->query($sql);
-
-        if($res->num_rows > 0) {
-            while($i = $res->fetch_assoc()) {
-                echo  $i["answerA"];
-            }
-        }
-        $pdo->close();
+        $inhalt="answerA";
+        include 'includes/questionDB.php';
 
         ?></button>
 
-    <button type="button" id="button2" name="answer2" onclick="buttonClick();" action="inserts/insertUserQuestionB.php" method="post">
+    <button type="button" id="button2" name="answer2" onclick="buttonClick();">
         <?php
         include 'includes/dbconnect.php';
-        $sql = "SELECT * FROM question WHERE questionID='1'";
-        $res = $pdo->query($sql);
-
-        if($res->num_rows > 0) {
-            while($i = $res->fetch_assoc()) {
-                echo  $i["answerB"];
-            }
-        }
-        $pdo->close();
+        $inhalt="answerB";
+        include 'includes/questionDB.php';
         ?>
     </button>
     <button type="button" id="button3"; onclick="continuer();">
