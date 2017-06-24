@@ -1,5 +1,5 @@
 <?php
-include 'includes/dbconnect.php';
+include 'dbconnect.php';
 $sql = "SELECT * FROM question WHERE questioniD='$counter'";
 $res = $pdo->query($sql);
 

@@ -53,15 +53,14 @@
 
         <!-- Lightbox -->
         <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <!--Class: Lightbox-->
-            <div class="modal-content lightbox">
-                <div class="modal-header">
-                    <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Get Account</h4>
-                </div>
-                <form action="insertNewUser.php" method="post">
-                    <<form action="?register=1" method="post">
+            <div class="modal-dialog" role="document">
+                <!--Class: Lightbox-->
+                <div class="modal-content lightbox">
+                    <div class="modal-header">
+                      <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Get Account</h4>
+                    </div>
+                    <form action="includes/newUserDB.php" method="post">
                         E-Mail:<br>
                         <input type="email" size="40" maxlength="250" name="email"><br><br>
 
@@ -71,13 +70,11 @@
                         Passwort wiederholen:<br>
                         <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
 
-                        <input type="submit" value="Abschicken">
+                        <input type="submit" value="Registrieren">
                     </form>
-                </form>
-
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </main>
 <footer>
