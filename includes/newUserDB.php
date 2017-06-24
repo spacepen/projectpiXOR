@@ -18,4 +18,3 @@ if($result) {
     echo ' Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
 }
 
-?>

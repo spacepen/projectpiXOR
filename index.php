@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php
+include('includes/login.php'); // Includes Login Script
+
+if(isset($_SESSION['login_user'])){
+    header("location: anwendung.php");
+}
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,20 +45,22 @@
 
         <!--Loginbox-->
         <div class="loginbox">
-        <div class="form-group">
-            <label for="exampleInputEmail1"></label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <form action="includes/login.php" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1"></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1"></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit">Login</button>
+                <!-- GetAccount Button Lightbox Class: button-->
+                <button type="button"  data-toggle="modal" data-target="#myModal">
+                    Get Account
+                </button>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1"></label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button type="button">Login</button>
-        <!-- GetAccount Button Lightbox Class: button-->
-        <button type="button"  data-toggle="modal" data-target="#myModal">
-            Get Account
-        </button>
-    </div>
 
         <!-- Lightbox -->
         <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
