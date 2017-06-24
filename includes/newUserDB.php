@@ -1,10 +1,10 @@
 <?php
-include 'dbconnect.php';
+include "dbconnect.php";
 $email = $_POST["email"];
 $password = $_POST["passwort"];
 
-$sql = "INSERT INTO users (email, password) VALUES (" . $email . "," . $password . ");";
 
+$sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $password . "');";
 
 echo "<p><strong>PHP Info: </strong>" . $sql . "</p>";
 
@@ -12,10 +12,10 @@ $result = mysqli_query($pdo, $sql);
 
 echo $result;
 
-if($sql) {
-    echo "true" ;
+if($result) {
+    echo 'Du wurdest erfolgreich registriert. <a href="/anwendung.php">Zur Anwendung</a>';
 } else {
-    $pdo->errorCode() ;
-    echo "false" ;
+    echo ' Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
 }
+
 ?>
