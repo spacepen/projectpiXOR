@@ -1,5 +1,7 @@
 <?php
 
+// Einfacher Login
+
 include "includes/dbconnect.php";
 //values from index.php
 session_start();
@@ -14,7 +16,7 @@ if(isset($_POST['email'])){
     }
 }
 
-// Login - Versuch
+// Login - Versuch funktioniert leider nicht wie erwartet...
 /*
 
 if(isset($_POST['email'])){
