@@ -1,21 +1,23 @@
 <?php
-include "dbconnect.php";
-$email = $_POST["email"];
-$password = $_POST["passwort"];
+include "includes/dbconnect.php";
+$regsuccess=false;
 
 
-$sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $password . "');";
+if(isset($_POST['email'])) {
+    if (isset($_POST['passwort'])) {
+        $email = $_POST["email"];
+        $password = $_POST["passwort"];
+        $sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $password . "');";
+        $result = mysqli_query($pdo, $sql);
 
-//echo "<p><strong>PHP Info: </strong>" . $sql . "</p>";
+        if ($result) {
+//            header('location: index.php');
+            $regsuccess = true;
+        } else {
+            echo ' Beim Abspeichern ist leider ein Fehler aufgetreten. Bitte verwenden Sie eine Email-Adresse, die noch nicht eingespeichert ist.';
+        }
 
-$result = mysqli_query($pdo, $sql);
-
-echo $result;
-
-
-if($result) {
-    header('location: /projectpiXOR/index.php');
-} else {
-    echo ' Beim Abspeichern ist leider ein Fehler aufgetreten. Bitte verwenden Sie eine Email-Adresse, die noch nicht eingespeichert ist.';
+    }
 }
+
 

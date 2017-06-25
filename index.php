@@ -1,17 +1,8 @@
 <?php
-//values from index.php
-session_start();
-$ifError =false;
-if(isset($_POST['email'])){
-    if($_POST['email']=='peter'&& $_POST['password']=='geheim'){
-        $_SESSION['email']='peter';
-        header('location: anwendung.php');
-        exit;
-
-    }else{
-        $ifError = true;
-    }
-}
+    include 'includes/login.php';
+?>
+<?php
+    include 'includes/newUserDB.php';
 ?>
 <!DOCTYPE html>
 
@@ -69,9 +60,15 @@ if(isset($_POST['email'])){
             </form>
         </div>
 
-        <?php if ($ifError):?>
-        <p>Falsche Eingabe</p>
-        <?php
+        <?php if ($ifError&&!$regsuccess):?>
+            <p>Falsche Eingabe</p>
+            <?php
+        endif;
+        ?>
+
+        <?php if ($regsuccess):?>
+            <p>Successfull registration</p>
+            <?php
         endif;
         ?>
 
@@ -84,7 +81,7 @@ if(isset($_POST['email'])){
                       <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                       <h4 class="modal-title" id="myModalLabel">Get Account</h4>
                     </div>
-                    <form action="includes/newUserDB.php" method="post">
+                    <form action="" method="post">
                         E-Mail:<br>
                         <input type="email" size="40" maxlength="250" name="email"><br><br>
 
