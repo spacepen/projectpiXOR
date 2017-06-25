@@ -7,7 +7,6 @@ if(isset($_POST['email'])){
         $_SESSION['email']='peter';
         header('location: anwendung.php');
         exit;
-
     }else{
         $ifError = true;
     }

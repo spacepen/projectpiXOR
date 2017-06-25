@@ -1,6 +1,8 @@
 <?php
     include 'dbconnect.php';
-    $insertB = "INSERT INTO userquestion(selection, questionID, usersID) VALUES (TRUE, 1, 1 )";
-    $result = mysqli_query($pdo, $insertB);
+    if(isset($_POST['answer2'])) {
+        $fql = "INSERT INTO userquestion (selection, usersID, questionID) VALUES (FALSE, '" . 1 . "', '" . 1 . "');";
+        $result = mysqli_query($pdo, $fql);
+    }
 
 ?>

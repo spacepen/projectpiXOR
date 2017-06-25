@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     $istBenutzerAngemeldet = isset ($_SESSION['email']);
@@ -7,12 +8,22 @@
         $urmail= '';
     }
 
-?>
+//?><!--stay angemeldet-->
+<?php
 
-<!DOCTYPE html>
+include 'includes/insertUserQuestionA.php';
+
+
+?><!--inserts-->
 <?php
 include_once 'includes/counter.php';
+//?>
+<?php
+include 'includes/insertUserQuestionB.php';
 ?>
+<!--counter-->
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +42,15 @@ include_once 'includes/counter.php';
     <div class="width">
         <img class="logo pixor" src="images/logo1.png">
         <img class="logo " src="images/logo2.png">
+
         <div class="socialmedia">
+            <?php
+            if ($istBenutzerAngemeldet):
+                ?>
+                <p class="social"><a href="logout.php">Logout</a></p>
+                <?php
+            endif;
+            ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
                 <img class="social" src="images/SocialMedia/facebook.png">
             </a>
@@ -44,27 +63,20 @@ include_once 'includes/counter.php';
         </div>
     </div>
 </header>
-<?php
-    if ($istBenutzerAngemeldet):
-?>
-    <p>Your mail: <? htmlspecialchars($urmail)?></p>
-    <p><a href="logout.php">Logout</a></p>
-<?php
-endif;
-?>
+
 <main>
 
     <p id="question">
         <?php
             include 'includes/dbconnect.php';
             $inhalt="questionName";
-            $counter;//das ding muss durchzählen
+            $counter;
             include 'includes/questionDB.php';
 
         ?>
     </p>
 
-
+    <form method="post">
     <button type="submit" id="button1" name="answer1" onclick= "buttonClick();">
         <?php
         include 'includes/dbconnect.php';
@@ -72,17 +84,17 @@ endif;
         include 'includes/questionDB.php';
 
         ?></button>
-
-    <button type="button" id="button2" name="answer2" onclick="buttonClick();">
+    </form>
+    <form method="post">
+    <button type="submit" id="button2" name="answer2" onclick="buttonClick();">
         <?php
         include 'includes/dbconnect.php';
         $inhalt="answerB";
         include 'includes/questionDB.php';
-        ?>
-    </button>
-    <form action="includes/continue.php">
-    <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
+
+        ?></button>
     </form>
+    <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
 </main>
 <footer>
     <dfn>© XOR, All rights reserved</dfn>
