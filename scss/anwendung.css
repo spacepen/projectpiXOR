@@ -36,7 +36,16 @@
   align-items: center;
   justify-content: center; }
 
+.a {
+  float: left; }
+
 .b {
   float: right; }
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=anwendung.css.map */

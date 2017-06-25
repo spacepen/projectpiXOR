@@ -61,7 +61,7 @@ include 'includes/insertUserQuestionB.php';
 
 <main>
     <div class="width">
-    <div >
+    <div class="question" >
         <p id="question">
             <?php
                 include 'includes/dbconnect.php';
@@ -73,7 +73,7 @@ include 'includes/insertUserQuestionB.php';
         </p>
     </div>
 
-    <div>
+    <div class="a">
         <form method="post">
             <button type="submit" class="button" id="button1" name="answer1" onclick= "buttonClick();">
                 <?php
