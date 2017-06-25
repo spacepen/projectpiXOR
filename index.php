@@ -60,7 +60,7 @@
             </form>
         </div>
 
-        <?php if ($ifError&&!$regsuccess):?>
+        <?php if ($ifError&&!$regsuccess&&!$regfail):?>
             <p>Falsche Eingabe</p>
             <?php
         endif;
@@ -71,7 +71,9 @@
             <?php
         endif;
         ?>
-
+        <?php if($regfail):?>
+            <p>Bitte verwenden sie ein nocch nicht verwendet email adresse.</p>
+        <?php endif ?>
         <!-- Lightbox -->
         <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">

@@ -1,6 +1,7 @@
 <?php
 include "includes/dbconnect.php";
 $regsuccess=false;
+$regfail=false;
 
 
 if(isset($_POST['email'])) {
@@ -14,7 +15,7 @@ if(isset($_POST['email'])) {
 //            header('location: index.php');
             $regsuccess = true;
         } else {
-            echo ' Beim Abspeichern ist leider ein Fehler aufgetreten. Bitte verwenden Sie eine Email-Adresse, die noch nicht eingespeichert ist.';
+            $regfail = true;
         }
 
     }
