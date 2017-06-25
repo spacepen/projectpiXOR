@@ -45,13 +45,7 @@ include 'includes/insertUserQuestionB.php';
         <img class="logo " src="images/logo2.png">
 
         <div class="socialmedia">
-            <?php
-            if ($istBenutzerAngemeldet):
-                ?>
-                <p class="social"><a href="logout.php">Logout</a></p>
-                <?php
-            endif;
-            ?>
+
             <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
                 <img class="social" src="images/SocialMedia/facebook.png">
             </a>
@@ -66,7 +60,8 @@ include 'includes/insertUserQuestionB.php';
 </header>
 
 <main>
-    <div>
+    <div class="width">
+    <div >
         <p id="question">
             <?php
                 include 'includes/dbconnect.php';
@@ -90,7 +85,7 @@ include 'includes/insertUserQuestionB.php';
             </button>
         </form>
     </div>
-    <div>
+    <div class="b">
         <form method="post">
             <button type="submit" class="button" id="button2" name="answer2" onclick="buttonClick();">
                 <?php
@@ -106,9 +101,16 @@ include 'includes/insertUserQuestionB.php';
     <div>
         <input type="submit" id="button3" name="continue" onclick="continuer();" value="Submit">
     </div>
+    </div>
 </main>
 <footer>
-    <dfn>XOR, 2017</dfn>
+    <?php
+    if ($istBenutzerAngemeldet):
+        ?>
+        <a href="logout.php"><button>Logout</button></a>
+        <?php
+    endif;
+    ?>
 </footer>
 
 </body>

@@ -31,4 +31,12 @@
   text-decoration: none;
   cursor: pointer; }
 
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.b {
+  float: right; }
+
 /*# sourceMappingURL=anwendung.css.map */
