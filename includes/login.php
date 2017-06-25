@@ -3,8 +3,8 @@
 session_start();
 $ifError =false;
 if(isset($_POST['email'])){
-    if($_POST['email']=='peter'&& $_POST['password']=='geheim'){
-        $_SESSION['email']='peter';
+    if($_POST['email']=='max@mustermann'&& $_POST['password']=='test'){
+        $_SESSION['email']='max@mustermann';
         header('location: anwendung.php');
         exit;
     }else{

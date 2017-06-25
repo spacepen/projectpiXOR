@@ -8,7 +8,10 @@ if(isset($_POST['email'])) {
     if (isset($_POST['passwort'])) {
         $email = $_POST["email"];
         $password = $_POST["passwort"];
-        $sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $password . "');";
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
+
+        $sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $hash . "');";
         $result = mysqli_query($pdo, $sql);
 
         if ($result) {
