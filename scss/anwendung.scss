@@ -1,4 +1,5 @@
 $boxcolor: rgba(3,3,3,0.6);//primary color of all boxes
+$white: #ffffff;
 
 #button1{
   visibility: visible;
@@ -15,10 +16,12 @@ $boxcolor: rgba(3,3,3,0.6);//primary color of all boxes
   visibility: visible;
   font-size: 30px;
   font-weight: lighter;
+  color: $white;
+  text-shadow: 0 0 3px black;
 }
 
 .button {
-  color: #ffffff;
+  color: $white;
   font-size: 40px;
   font-weight: lighter;
   background: $boxcolor;

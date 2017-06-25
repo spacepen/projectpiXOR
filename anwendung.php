@@ -8,7 +8,7 @@
         $urmail= '';
     }
 
-//?><!--stay angemeldet-->
+?><!--stay angemeldet-->
 <?php
 
 include 'includes/insertUserQuestionA.php';
@@ -17,7 +17,7 @@ include 'includes/insertUserQuestionA.php';
 ?><!--inserts-->
 <?php
 include_once 'includes/counter.php';
-//?>
+?>
 <?php
 include 'includes/insertUserQuestionB.php';
 ?>
@@ -104,11 +104,11 @@ include 'includes/insertUserQuestionB.php';
     </div>
 
     <div>
-        <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
+        <input type="submit" id="button3" name="continue" onclick="continuer();" value="Submit">
     </div>
 </main>
 <footer>
-    <dfn>© XOR, All rights reserved</dfn>
+    <dfn>XOR, 2017</dfn>
 </footer>
 
 </body>

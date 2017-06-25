@@ -28,7 +28,7 @@
         <img class="logo pixor" src="images/logo1.png">
         <img class="logo " src="images/logo2.png">
         <div class="socialmedia">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
+            <a href="https://www.facebook.com/">
                 <img class="social" src="images/SocialMedia/facebook.png">
             </a>
             <a href="https://twitter.com/home?status=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
