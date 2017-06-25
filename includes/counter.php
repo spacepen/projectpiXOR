@@ -1,4 +1,3 @@
 <?php
 $counter=1;
 
-?>

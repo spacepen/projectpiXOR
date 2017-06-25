@@ -22,6 +22,7 @@ include_once 'includes/counter.php';//das ding muss noch durchzählen
 include 'includes/insertUserQuestionB.php';
 ?>
 <!--counter-->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -38,7 +39,9 @@ include 'includes/insertUserQuestionB.php';
     <script src="js/core.js"></script>
 
 </head>
+
 <body>
+
 <header>
     <div class="width">
         <img class="logo pixor" src="images/logo1.png">
@@ -46,7 +49,7 @@ include 'includes/insertUserQuestionB.php';
 
         <div class="socialmedia">
 
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
+            <a href="https://www.facebook.com/">
                 <img class="social" src="images/SocialMedia/facebook.png">
             </a>
             <a href="https://twitter.com/home?status=http%3A//localhost%3A63342/projectpiXOR/pixor/index.html?_ijt=54cl3c4kkejesav5ne75f2pcl1">
@@ -61,48 +64,49 @@ include 'includes/insertUserQuestionB.php';
 
 <main>
     <div class="width">
-    <div class="question" >
-        <p id="question">
-            <?php
-                include 'includes/dbconnect.php';
-                $inhalt="questionName";
-                $counter;
-                include 'includes/questionDB.php';
-
-            ?>
-        </p>
-    </div>
-
-    <div class="a">
-        <form method="post">
-            <button type="submit" class="selector" id="button1" name="answer1" onclick= "buttonClick();">
+        <div class="question" >
+            <p id="question">
                 <?php
-                include 'includes/dbconnect.php';
-                $inhalt="answerA";
-                include 'includes/questionDB.php';
+                    include 'includes/dbconnect.php';
+                    $inhalt="questionName";
+                    $counter;
+                    include 'includes/questionDB.php';
 
                 ?>
-            </button>
-        </form>
-    </div>
-    <div class="b">
-        <form method="post">
-            <button type="submit" class="selector" id="button2" name="answer2" onclick="buttonClick();">
-                <?php
-                include 'includes/dbconnect.php';
-                $inhalt="answerB";
-                include 'includes/questionDB.php';
+            </p>
+        </div>
 
-                ?>
-            </button>
-        </form>
-    </div>
+        <div class="a">
+            <form method="post">
+                <button type="submit" class="selector" id="button1" name="answer1" onclick= "buttonClick();">
+                    <?php
+                    include 'includes/dbconnect.php';
+                    $inhalt="answerA";
+                    include 'includes/questionDB.php';
 
-    <div>
-        <input type="submit" id="button3" name="continue" onclick="continuer();" value="Submit">
-    </div>
+                    ?>
+                </button>
+            </form>
+        </div>
+        <div class="b">
+            <form method="post">
+                <button type="submit" class="selector" id="button2" name="answer2" onclick="buttonClick();">
+                    <?php
+                    include 'includes/dbconnect.php';
+                    $inhalt="answerB";
+                    include 'includes/questionDB.php';
+
+                    ?>
+                </button>
+            </form>
+        </div>
+
+        <div>
+            <input type="submit" id="button3" name="continue" onclick="continuer();" value="Submit">
+        </div>
     </div>
 </main>
+
 <footer>
     <?php
     if ($istBenutzerAngemeldet):

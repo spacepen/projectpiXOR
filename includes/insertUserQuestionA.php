@@ -7,4 +7,3 @@ include 'dbconnect.php';
         $sql = "INSERT INTO userquestion (selection, usersID, questionID) VALUES (TRUE, '" . $usersID . "', '" . 1  . "');";
         $result = mysqli_query($pdo, $sql);
 }
-?>

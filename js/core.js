@@ -5,9 +5,9 @@ $(document).ready(function(){
     var header = $('body');
 
     var backgrounds = new Array(
-        'url(/rep/projectpixor/images/background.jpg)'
-        , 'url(/rep/projectpixor/images/background2.jpg)'
-        , 'url(/rep/projectpixor/images/background3.jpg)'
+        'url(/projectpixor/images/background.jpg)'
+        , 'url(/projectpixor/images/background2.jpg)'
+        , 'url(/projectpixor/images/background3.jpg)'
     );
 
     var current = 0;
@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 });
 
+
 /*disable und enable button*/
 
 function buttonClick()
@@ -32,8 +33,8 @@ function buttonClick()
         document.getElementById('question').style.visibility = 'hidden';
 }
 
-/*fragen counter*/
 
+/*fragen counter*/
 
 function continuer() {
 

@@ -5,4 +5,3 @@
         $result = mysqli_query($pdo, $fql);
     }
 
-?>

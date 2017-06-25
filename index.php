@@ -20,6 +20,7 @@
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/core.js"></script>
+
 </head>
 <body>
 
