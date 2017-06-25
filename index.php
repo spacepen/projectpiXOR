@@ -53,9 +53,9 @@
                 <div class="form-group">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
-                <button type="submit">Login</button>
+                <button class="btn btn-default" type="submit">Login</button>
                 <!-- GetAccount Button Lightbox Class: button-->
-                <button type="button"  data-toggle="modal" data-target="#myModal">
+                <button class="btn btn-default" type="button"  data-toggle="modal" data-target="#myModal">
                     Get Account
                 </button>
             </form>
@@ -86,15 +86,15 @@
                     </div>
                     <form class="input-style" action="" method="post">
                         <b class="x">E-Mail:</b><br>
-                        <input type="email" size="40" maxlength="250" name="email"><br><br>
+                        <input type="email" size="40" maxlength="250" class="form-control"name="email"><br><br>
 
                         <b class="x">Dein Passwort:</b><br>
-                        <input type="password" size="40"  maxlength="250" name="passwort"><br>
+                        <input type="password" size="40"  maxlength="250"class="form-control" name="passwort"><br>
 
                         <b class="x">Passwort wiederholen:</b><br>
-                        <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
+                        <input type="password" size="40" maxlength="250" class="form-control" name="passwort2"><br><br>
 
-                        <input type="submit" value="Registrieren">
+                        <input type="submit" class="btn btn-default" value="Registrieren">
                     </form>
                 </div>
             </div>

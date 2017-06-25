@@ -4,7 +4,11 @@ $boxcolor: rgba(3,3,3,0.5);//primary color of all boxes
 body{
   //background-image: url(/projectpiXOR/pixor/images/background.jpg), url(/projectpiXOR/pixor/images/background2.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
 
   // Fade IN & OUT settings for background images:
 
@@ -105,6 +109,7 @@ footer{
   align-items: center;
   justify-content: center;
   position: fixed;
+  box-shadow: 9px 3px 9px 9px rgba(0,0,0,.5);
 }
 
 //general

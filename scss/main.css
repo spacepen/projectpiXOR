@@ -1,6 +1,9 @@
 body {
   background-size: cover;
-  background-repeat: no-repeat;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   -webkit-transition: background 3000ms ease-in 2s;
   /* property duration timing-function delay */
   -moz-transition: background 3000ms ease-in 2s;
@@ -78,7 +81,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; }
+  position: fixed;
+  box-shadow: 9px 3px 9px 9px rgba(0, 0, 0, 0.5); }
 
 .width {
   width: 980px; }

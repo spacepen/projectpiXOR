@@ -16,7 +16,7 @@ include 'includes/insertUserQuestionA.php';
 
 ?><!--inserts-->
 <?php
-include_once 'includes/counter.php';
+include_once 'includes/counter.php';//das ding muss noch durchzählen
 ?>
 <?php
 include 'includes/insertUserQuestionB.php';
@@ -75,7 +75,7 @@ include 'includes/insertUserQuestionB.php';
 
     <div class="a">
         <form method="post">
-            <button type="submit" class="button" id="button1" name="answer1" onclick= "buttonClick();">
+            <button type="submit" class="selector" id="button1" name="answer1" onclick= "buttonClick();">
                 <?php
                 include 'includes/dbconnect.php';
                 $inhalt="answerA";
@@ -87,7 +87,7 @@ include 'includes/insertUserQuestionB.php';
     </div>
     <div class="b">
         <form method="post">
-            <button type="submit" class="button" id="button2" name="answer2" onclick="buttonClick();">
+            <button type="submit" class="selector" id="button2" name="answer2" onclick="buttonClick();">
                 <?php
                 include 'includes/dbconnect.php';
                 $inhalt="answerB";
@@ -107,7 +107,7 @@ include 'includes/insertUserQuestionB.php';
     <?php
     if ($istBenutzerAngemeldet):
         ?>
-        <a href="logout.php"><button>Logout</button></a>
+        <a href="logout.php"><button class="btn btn-default">Logout</button></a>
         <?php
     endif;
     ?>
