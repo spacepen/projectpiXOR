@@ -1,5 +1,18 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    $istBenutzerAngemeldet = isset ($_SESSION['email']);
+    if($istBenutzerAngemeldet){
+        $urmail = $_SESSION['email'];
+    }else{
+        $urmail= '';
+    }
 
+?>
+
+<!DOCTYPE html>
+<?php
+include_once 'includes/counter.php';
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,13 +44,21 @@
         </div>
     </div>
 </header>
+<?php
+    if ($istBenutzerAngemeldet):
+?>
+    <p>Your mail: <? htmlspecialchars($urmail)?></p>
+    <p><a href="logout.php">Logout</a></p>
+<?php
+endif;
+?>
 <main>
 
     <p id="question">
         <?php
             include 'includes/dbconnect.php';
             $inhalt="questionName";
-            $counter=2;//das ding muss durchzählen
+            $counter;//das ding muss durchzählen
             include 'includes/questionDB.php';
 
         ?>
@@ -59,9 +80,9 @@
         include 'includes/questionDB.php';
         ?>
     </button>
-    <button type="button" id="button3"; onclick="continuer();">
-        Continue
-    </button>
+    <form action="includes/continue.php">
+    <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
+    </form>
 </main>
 <footer>
     <dfn>© XOR, All rights reserved</dfn>

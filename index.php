@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-
 <?php
-include('includes/login.php'); // Includes Login Script
+//values from index.php
+session_start();
+$ifError =false;
+if(isset($_POST['email'])){
+    if($_POST['email']=='peter'&& $_POST['password']=='geheim'){
+        $_SESSION['email']='peter';
+        header('location: anwendung.php');
+        exit;
 
-if(isset($_SESSION['login_user'])){
-    header("location: anwendung.php");
+    }else{
+        $ifError = true;
+    }
 }
 ?>
+<!DOCTYPE html>
+
+
 
 <html lang="en">
 <head>
@@ -45,14 +54,12 @@ if(isset($_SESSION['login_user'])){
 
         <!--Loginbox-->
         <div class="loginbox">
-            <form action="includes/login.php" method="post">
+            <form action="" method="POST">
                 <div class="form-group">
-                    <label for="exampleInputEmail1"></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <input type=text" class="form-control" id="email" name="email" placeholder="Email"  >
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1"></label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
                 <button type="submit">Login</button>
                 <!-- GetAccount Button Lightbox Class: button-->
@@ -61,6 +68,12 @@ if(isset($_SESSION['login_user'])){
                 </button>
             </form>
         </div>
+
+        <?php if ($ifError):?>
+        <p>Falsche Eingabe</p>
+        <?php
+        endif;
+        ?>
 
         <!-- Lightbox -->
         <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
