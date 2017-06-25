@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile-first -->
     <title>xor</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
@@ -61,18 +62,18 @@
         </div>
 
         <?php if ($ifError&&!$regsuccess&&!$regfail):?>
-            <p>Falsche Eingabe</p>
+            <p>Falsche Eingabe! Bitte versuchen Sie es erneut.</p>
             <?php
         endif;
         ?>
 
         <?php if ($regsuccess):?>
-            <p>Successfull registration</p>
+            <p>Die Registrierung war erfolgreich!</p>
             <?php
         endif;
         ?>
         <?php if($regfail):?>
-            <p>Bitte verwenden sie ein nocch nicht verwendet email adresse.</p>
+            <p>Bitte registrieren Sie sich mit einer Email-Adresse, die noch nicht bereits vergeben wurde.</p>
         <?php endif ?>
         <!-- Lightbox -->
         <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -81,16 +82,16 @@
                 <div class="modal-content lightbox">
                     <div class="modal-header">
                       <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Get Account</h4>
+                      <h4 class="modal-title x" id="myModalLabel">Get Account</h4>
                     </div>
-                    <form action="" method="post">
-                        E-Mail:<br>
+                    <form class="input-style" action="" method="post">
+                        <b class="x">E-Mail:</b><br>
                         <input type="email" size="40" maxlength="250" name="email"><br><br>
 
-                        Dein Passwort:<br>
+                        <b class="x">Dein Passwort:</b><br>
                         <input type="password" size="40"  maxlength="250" name="passwort"><br>
 
-                        Passwort wiederholen:<br>
+                        <b class="x">Passwort wiederholen:</b><br>
                         <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
 
                         <input type="submit" value="Registrieren">
@@ -101,7 +102,7 @@
     </div>
 </main>
 <footer>
-    <dfn>© XOR, All rights reserved</dfn>
+    <i>XOR, 2017</i>
 </footer>
 
 </body>

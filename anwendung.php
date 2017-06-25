@@ -27,6 +27,7 @@ include 'includes/insertUserQuestionB.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile-first -->
     <title>anwendung</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
@@ -65,36 +66,46 @@ include 'includes/insertUserQuestionB.php';
 </header>
 
 <main>
+    <div>
+        <p id="question">
+            <?php
+                include 'includes/dbconnect.php';
+                $inhalt="questionName";
+                $counter;
+                include 'includes/questionDB.php';
 
-    <p id="question">
-        <?php
-            include 'includes/dbconnect.php';
-            $inhalt="questionName";
-            $counter;
-            include 'includes/questionDB.php';
+            ?>
+        </p>
+    </div>
 
-        ?>
-    </p>
+    <div>
+        <form method="post">
+            <button type="submit" class="button" id="button1" name="answer1" onclick= "buttonClick();">
+                <?php
+                include 'includes/dbconnect.php';
+                $inhalt="answerA";
+                include 'includes/questionDB.php';
 
-    <form method="post">
-    <button type="submit" id="button1" name="answer1" onclick= "buttonClick();">
-        <?php
-        include 'includes/dbconnect.php';
-        $inhalt="answerA";
-        include 'includes/questionDB.php';
+                ?>
+            </button>
+        </form>
+    </div>
+    <div>
+        <form method="post">
+            <button type="submit" class="button" id="button2" name="answer2" onclick="buttonClick();">
+                <?php
+                include 'includes/dbconnect.php';
+                $inhalt="answerB";
+                include 'includes/questionDB.php';
 
-        ?></button>
-    </form>
-    <form method="post">
-    <button type="submit" id="button2" name="answer2" onclick="buttonClick();">
-        <?php
-        include 'includes/dbconnect.php';
-        $inhalt="answerB";
-        include 'includes/questionDB.php';
+                ?>
+            </button>
+        </form>
+    </div>
 
-        ?></button>
-    </form>
-    <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
+    <div>
+        <input type="submit" id="button3" name="continue"onclick="continuer();" value="Submit">
+    </div>
 </main>
 <footer>
     <dfn>© XOR, All rights reserved</dfn>

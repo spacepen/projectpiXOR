@@ -1,19 +1,26 @@
-$boxcolor: rgba(3,3,3,0.5);//primary color of all boxes
+$boxcolor: rgba(3,3,3,0.6);//primary color of all boxes
+$buttoncolor: #333333; //primary button font color
 
 .loginbox{
   float: left;
   margin-top: 50px;
   margin-left: 20px;
   background-color: $boxcolor;
-  color: #333333;
+  color: $buttoncolor;
   padding: 20px;
   box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
 //lightbox
 .lightbox{
   background-color: $boxcolor;
-  color: white;
+  color: $buttoncolor;
   border-radius: 0;
+
+  .input-style{
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
 }
 .x{
   color: rgba(255,255,255,1);
