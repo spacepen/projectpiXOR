@@ -25,4 +25,23 @@
 .form-control {
   width: 200px; }
 
+.regsuccess, .error {
+  padding: 20px;
+  padding-bottom: 15px;
+  background-color: rgba(3, 3, 3, 0.6);
+  float: left;
+  margin-top: 10px;
+  width: 200px; }
+
+.error {
+  color: red; }
+
+.regsuccess {
+  color: greenyellow; }
+
+.form-control {
+  background: none;
+  color: white;
+  border-radius: 0; }
+
 /*# sourceMappingURL=home.css.map */

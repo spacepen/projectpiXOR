@@ -17,6 +17,7 @@ include 'includes/insertUserQuestionA.php';
 ?><!--inserts-->
 <?php
 include_once 'includes/counter.php';//das ding muss noch durchzählen
+$question = $counter;
 ?>
 <?php
 include 'includes/insertUserQuestionB.php';

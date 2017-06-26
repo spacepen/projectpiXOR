@@ -1,5 +1,7 @@
 $b: 980px; //width der Seite
 $boxcolor: rgba(3,3,3,0.5);//primary color of all boxes
+$buttoncolor: #333333;
+
 
 body{
   //background-image: url(/projectpiXOR/pixor/images/background.jpg), url(/projectpiXOR/pixor/images/background2.jpg);
@@ -117,6 +119,11 @@ footer{
   width:$b;
 }
 
+.btn{
+  border-radius: 0px;
+  background-color: $buttoncolor;
+  color:white;
+}
 
 
 

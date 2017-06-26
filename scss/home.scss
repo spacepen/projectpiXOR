@@ -32,3 +32,30 @@ $buttoncolor: #333333; //primary button font color
 .form-control{
   width: 200px;
 }
+
+.regsuccess, .error{
+    padding: 20px;
+    padding-bottom: 15px;
+    background-color: $boxcolor;
+    float: left;
+    margin-top: 10px;
+    width: 200px;
+  }
+
+.error{
+  color: red;
+}
+.regsuccess{
+  color: greenyellow;
+}
+
+.form-control {
+  background: none;
+  color: white;
+  border-radius: 0;
+}
+
+
+
+
+

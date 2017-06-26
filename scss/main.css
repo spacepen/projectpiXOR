@@ -87,4 +87,9 @@ footer {
 .width {
   width: 980px; }
 
+.btn {
+  border-radius: 0px;
+  background-color: #333333;
+  color: white; }
+
 /*# sourceMappingURL=main.css.map */
