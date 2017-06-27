@@ -1,9 +1,9 @@
-
+<!--necessary for the Logout button-->
 <?php
     session_start();
-    $istBenutzerAngemeldet = isset ($_SESSION['email']);
+    $istBenutzerAngemeldet = isset ($_SESSION['login_user']);
     if($istBenutzerAngemeldet){
-        $urmail = $_SESSION['email'];
+        $urmail = $_SESSION['login_user'];
     }else{
         $urmail= '';
     }
@@ -107,13 +107,19 @@ include 'includes/insertUserQuestionB.php';
 </main>
 
 <footer>
-    <?php
-    if ($istBenutzerAngemeldet):
-        ?>
-        <a href="logout.php"><button class="btn btn-default">Logout</button></a>
-        <?php
-    endif;
-    ?>
+    <div class="width">
+<!--        Displays the mail.-->
+        <div class="a" style="margin-left: -20px;">
+            <p>Angemeldet als <?php echo $urmail; ?></p>
+        </div>
+<!--        Logout Button-->
+        <?php if ($istBenutzerAngemeldet):?>
+            <div class = "b" style="margin-right: -20px">
+                <a href="logout.php"><button class="btn btn-default">Logout</button></a>
+            </div>
+        <?php endif; ?>
+    </div>
+
 </footer>
 
 </body>
