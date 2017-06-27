@@ -37,7 +37,7 @@ include 'includes/insertUserQuestionB.php';
     <link rel="icon" href="images/logo1.png">
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
-    <script src="js/core.js"></script>
+    <script src="js/core.js" type="text/javascript"></script>
 
 </head>
 
@@ -69,36 +69,33 @@ include 'includes/insertUserQuestionB.php';
             <p id="question">
                 <?php
                     include 'includes/dbconnect.php';
-                    $inhalt="questionName";
-                    $counter;
-                    include 'includes/questionDB.php';
+                include 'includes/questionDB.php';
+
+                    echo $row['questionName'];
 
                 ?>
             </p>
         </div>
 
         <div class="a">
-            <form method="post">
-                <button type="submit" class="selector" id="button1" name="answer1" onclick= "buttonClick();">
+            <form method="post" action="anwendung.php">
+                <button type="submit" class="selector" id="button1" name="answer1">
                     <?php
-                    include 'includes/dbconnect.php';
-                    $inhalt="answerA";
-                    include 'includes/questionDB.php';
-
+                        echo $row['answerA'];
                     ?>
                 </button>
+                <input type="hidden" name="questionid" class="questionId" value="<?php echo $questionId; ?>">
             </form>
         </div>
         <div class="b">
-            <form method="post">
-                <button type="submit" class="selector" id="button2" name="answer2" onclick="buttonClick();">
+            <form method="post" action="anwendung.php">
+                <button type="submit" class="selector" id="button2" name="answer2">
                     <?php
-                    include 'includes/dbconnect.php';
-                    $inhalt="answerB";
-                    include 'includes/questionDB.php';
+                    echo $row['answerB'];
 
                     ?>
                 </button>
+                <input type="hidden" name="questionid" class="questionId" value="<?php echo $questionId; ?>">
             </form>
         </div>
 

@@ -8,7 +8,7 @@ if(isset($_POST['email'])) {
     if (isset($_POST['passwort'])) {
         $email = $_POST["email"];
         $password = $_POST["passwort"];
-        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $hash = password_hash($password, PASSWORD_BCRYPT);
 
 
         $sql = "INSERT INTO users (email, password) VALUES ('" . $email . "', '" . $hash . "');";

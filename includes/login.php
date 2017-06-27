@@ -5,7 +5,7 @@
 include "includes/dbconnect.php";
 //values from index.php
 session_start();
-$ifError =false;
+/*$ifError =false;
 if(isset($_POST['email'])){
     if($_POST['email']=='max@mustermann.at'&& $_POST['password']=='123456'){
         $_SESSION['email']='max@mustermann.at';
@@ -14,38 +14,51 @@ if(isset($_POST['email'])){
     }else{
         $ifError = true;
     }
-}
+}*/
 
 // Login - Versuch funktioniert leider nicht wie erwartet...
-/*
+
+
+$ifError = false;
+
 
 if(isset($_POST['email'])){
 
-    $email = mysqli_real_escape_string($pdo,$_POST['email']);
-    $password = mysqli_real_escape_string($pdo,$_POST['password']);
+    $email = mysqli_real_escape_string($pdo, $_POST['email']);
 
-    $sql = "SELECT userID FROM users WHERE email = '$email' and password = '$password'";
+    $plainTextPassword = $_POST['password'];
+
+    $plainTextPassword = mysqli_real_escape_string($pdo, $plainTextPassword);
+
+
+
+    $sql = "SELECT `usersID`,`password` FROM `users` WHERE `email` = '$email'";
     $result = mysqli_query($pdo, $sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
 
-    $count = mysqli_num_rows($result);
-
-    if($count == 1) {
-        session_register("email");
-        $_SESSION['login_user'] = $email;
-
-        header("location: anwendung.php");
-    }else {
-        $error = "Your Login Name or Password is invalid";
+    if(!$result) {
+        echo mysqli_error($pdo);
     }
 
-    if($_POST['email']==$email&& $_POST['password']==$password){
-        $_SESSION['email']=$email;
-        header('location: anwendung.php');
-        exit;
-    }else{
+    if(mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+        $passwordFromDb = $row['password'];
+
+        if(password_verify($plainTextPassword, $passwordFromDb)) {
+            $_SESSION['login_user'] = $email;
+            $_SESSION['login_userid'] = $row['userID'];
+
+            header("location: anwendung.php");
+
+        } else {
+            $ifError = true;
+        }
+
+
+
+
+    } else {
         $ifError = true;
     }
+
 }
-*/

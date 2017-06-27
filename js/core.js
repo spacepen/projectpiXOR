@@ -1,6 +1,8 @@
 
+
 /* DYNAMIC BACKGROUND IMAGES */
 $(document).ready(function(){
+
 
     var header = $('body');
 
@@ -19,6 +21,51 @@ $(document).ready(function(){
     }
     setInterval(nextBackground, 10000);
     header.css('background-image', backgrounds[0]);
+
+
+    $('#button1, #button2').click(function(e) {
+
+        e.preventDefault();
+
+        //, answeredQuestion: questionId, answer: answerOtion
+
+        console.log('click');
+
+        $.ajax({
+           url: 'api.php',
+            method: 'post',
+            data: {cmd: 'getNextQuestion' },
+            success: function(dataReceived) {
+               console.log(dataReceived);
+
+               console.log(dataReceived.questionId);
+               console.log(dataReceived.questionName);
+               console.log(dataReceived.answerA);
+               console.log(dataReceived.answerB);
+            }
+        });
+        //buttonClick();
+    });
+
+
+    $('form').submit(function(e) { //.anwerform
+
+        e.preventDefault();
+
+        console.log('submit');
+
+
+        $.ajax({
+            url: 'api.php',
+            method: 'post',
+            data: {cmd: 'getNextQuestion' }, //, answeredQuestion: questionId, answer: answerOtion
+            success: function(dataReceived) {
+                console.log(dataReceived);
+            }
+        });
+        //buttonClick();
+    });
+
 
 });
 
@@ -43,7 +90,6 @@ function continuer() {
     document.getElementById('button3').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
 }
-
 
 
 
