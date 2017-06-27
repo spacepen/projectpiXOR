@@ -38,6 +38,7 @@ include 'includes/insertUserQuestionB.php';
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/core.js" type="text/javascript"></script>
+    <script src="js/newQuestion.js" type="text/javascript"></script>
 
 </head>
 

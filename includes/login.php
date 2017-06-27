@@ -1,36 +1,18 @@
 <?php
 
-// Einfacher Login
-
 include "includes/dbconnect.php";
-//values from index.php
+
 session_start();
-/*$ifError =false;
-if(isset($_POST['email'])){
-    if($_POST['email']=='max@mustermann.at'&& $_POST['password']=='123456'){
-        $_SESSION['email']='max@mustermann.at';
-        header('location: anwendung.php');
-        exit;
-    }else{
-        $ifError = true;
-    }
-}*/
-
-// Login - Versuch funktioniert leider nicht wie erwartet...
-
 
 $ifError = false;
 
-
-if(isset($_POST['email'])){
+if(isset($_POST['email'])&&isset($_POST['password'])){
 
     $email = mysqli_real_escape_string($pdo, $_POST['email']);
 
     $plainTextPassword = $_POST['password'];
 
     $plainTextPassword = mysqli_real_escape_string($pdo, $plainTextPassword);
-
-
 
     $sql = "SELECT `usersID`,`password` FROM `users` WHERE `email` = '$email'";
     $result = mysqli_query($pdo, $sql);

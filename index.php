@@ -71,6 +71,12 @@ include 'includes/newUserDB.php';
                     </div>
                 <?php endif ?>
 
+                <?php if ($passfail): ?>
+                    <div class="error">
+                        <p>Passwörter sind nicht identisch. Bitte versuchen sie die Registrierung erneut.</p>
+                    </div>
+                <?php endif ?>
+
                 <?php if ($regsuccess): ?>
                     <div class="regsuccess">
                         <p>Die Registrierung war erfolgreich!</p>
@@ -95,7 +101,7 @@ include 'includes/newUserDB.php';
                             <input type="email" size="40" maxlength="250" class="form-control" name="email"><br><br>
 
                             <b class="x">Dein Passwort:</b><br>
-                            <input type="password" size="40" maxlength="250" class="form-control" id="passwordCheck"name="passwort" ><br>
+                            <input type="password" size="40" maxlength="250" class="form-control" name="passwort" ><br>
 
                             <b class="x">Passwort wiederholen:</b><br>
                             <input type="password" size="40" maxlength="250" class="form-control" name="passwort2"><br><br>
