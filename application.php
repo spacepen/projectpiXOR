@@ -30,7 +30,9 @@ include 'includes/insertUserQuestionB.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile-first -->
-    <title>Application</title>
+
+    <title>xor Application</title>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
     <link href="scss/anwendung.css" rel="stylesheet">
@@ -71,9 +73,7 @@ include 'includes/insertUserQuestionB.php';
                 <?php
                     include 'includes/dbconnect.php';
                 include 'includes/questionDB.php';
-
                     echo $row['questionName'];
-
                 ?>
             </p>
         </div>
@@ -92,8 +92,7 @@ include 'includes/insertUserQuestionB.php';
             <form method="post" action="application.php">
                 <button type="submit" class="selector" id="button2" name="answer2">
                     <?php
-                    echo $row['answerB'];
-
+                        echo $row['answerB'];
                     ?>
                 </button>
                 <input type="hidden" name="questionid" class="questionId" value="<?php echo $questionId; ?>">

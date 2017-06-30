@@ -11,7 +11,9 @@ include 'includes/newUserDB.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile-first -->
-    <title>XOR</title>
+
+    <title>xor Login</title>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
     <link href="scss/home.css" rel="stylesheet">
@@ -88,8 +90,8 @@ include 'includes/newUserDB.php';
         </div>
 
         <div class="welcome loginbox x">
-            <p>Welcome to XOR!</p>
-            <p>A game to choose your preference!</p>
+            <p>Welcome to <b>xor</b>!</p>
+            <p>A game to choose<br> your preferences!</p>
         </div>
 
             <!-- Lightbox -->

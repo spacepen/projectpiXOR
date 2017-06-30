@@ -3,15 +3,12 @@
 /* DYNAMIC BACKGROUND IMAGES */
 $(document).ready(function(){
 
-
     var header = $('body');
-
     var backgrounds = new Array(
         'url(/projectpixor/images/background.jpg)'
         , 'url(/projectpixor/images/background2.jpg)'
         , 'url(/projectpixor/images/background3.jpg)'
     );
-
     var current = 0;
 
     function nextBackground() {

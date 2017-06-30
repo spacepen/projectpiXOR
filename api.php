@@ -8,18 +8,21 @@ if(!empty($_POST) && isset($_POST['cmd']) && $_POST['cmd'] == 'getNextQuestion')
 
     $userId = $_SESSION['login_userid'];
 
-    $sql = "SELECT * FROM question WHERE questionID IS NOT IN(SELECT questionID FROM userquestion WHERE usersID='".$userId."')";
+    //$sql = "SELECT * FROM question WHERE questionID IS NOT IN(SELECT questionID FROM userquestion WHERE usersID='".$userId."')";
+            //|--> funktioniert irgendwie nicht...?!
 
-    //$result = .... query...
-    //$row = .... fetch_assoc...
+
+    $sql = "SELECT * FROM question"; //Testlösung
+
+    $result = mysqli_query($pdo, $sql) or die(mysqli_error($pdo));     //$result = .... query...
+    $row = mysqli_fetch_assoc($result);                                //$row = .... fetch_assoc...
 
     $row = array(
-        'questionId' => 6,
-        'questionName' => 'Wo kann man besser feiern gehen?',
-        'answerA' => 'Schenke',
-        'answerB' => 'Pure'
+        'questionId' => $row["questionID"],
+        'questionName' => $row["questionName"],
+        'answerA' => $row["answerA"],
+        'answerB' => $row["answerB"]
     );
-
 
     header('HTTP/1.1 200 OK');
     // set the content type

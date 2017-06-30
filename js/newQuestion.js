@@ -1,7 +1,6 @@
-/**
- * Created by Mir on 27.06.2017.
- */
+
 $(document).ready(function(){
+
     $('#button1, #button2').click(function(e) {
 
         e.preventDefault();
@@ -15,6 +14,8 @@ $(document).ready(function(){
             method: 'post',
             data: {cmd: 'getNextQuestion' },
             success: function(dataReceived) {
+
+
                 console.log(dataReceived);
 
                 console.log(dataReceived.questionId);
@@ -27,7 +28,7 @@ $(document).ready(function(){
     });
 
 
-    $('form').submit(function(e) { //.anwerform
+    $('form').submit(function(e) { //.answerform
 
         e.preventDefault();
 
@@ -44,6 +45,5 @@ $(document).ready(function(){
         });
         //buttonClick();
     });
-
 
 });
