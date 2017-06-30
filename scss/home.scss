@@ -23,7 +23,7 @@ $buttoncolor: #333333; //primary button font color
   }
 }
 .x{
-  color: rgba(255,255,255,1);
+  color: rgba(255,255,255,0.9);
 }
 .backlight{
   background-color: rgba(255,255,255,0.02);
@@ -53,6 +53,12 @@ $buttoncolor: #333333; //primary button font color
   background: none;
   color: white;
   border-radius: 0;
+}
+
+.welcome {
+  float: left;
+  font-weight: 200;
+  font-size: 200%;
 }
 
 

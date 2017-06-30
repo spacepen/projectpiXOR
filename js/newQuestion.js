@@ -6,7 +6,7 @@ $(document).ready(function(){
 
         e.preventDefault();
 
-        //, answeredQuestion: questionId, answer: answerOtion
+        //, answeredQuestion: questionId, answer: answerOption
 
         console.log('click');
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
         $.ajax({
             url: 'api.php',
             method: 'post',
-            data: {cmd: 'getNextQuestion' }, //, answeredQuestion: questionId, answer: answerOtion
+            data: {cmd: 'getNextQuestion' }, //, answeredQuestion: questionId, answer: answerOption
             success: function(dataReceived) {
                 console.log(dataReceived);
             }

@@ -30,7 +30,7 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
             $_SESSION['login_user'] = $email;
             $_SESSION['login_userid'] = $row['userID'];
 
-            header("location: anwendung.php");
+            header("location: application.php");
 
         } else {
             $ifError = true;
