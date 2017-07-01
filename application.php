@@ -10,15 +10,10 @@
 ?><!--Login/Logout-->
 <?php
 
-include 'includes/insertUserQuestionA.php';
+include 'includes/answer.php';
 
 
-?><!--InsertA-->
-<?php
-include 'includes/insertUserQuestionB.php';
-?><!--InsertB-->
-
-
+?><!--Answer-->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -80,7 +75,8 @@ include 'includes/insertUserQuestionB.php';
                         echo $row['answerA'];
                     ?>
                 </button>
-                <input type="hidden" name="questionid" class="questionId" value="<?php echo $questionId; ?>">
+                <input type="" class="questionId" value="<?php echo $questionId; ?>">
+                <input type="" class="answer" value="a">
             </form>
         </div>
         <div class="b">
@@ -90,7 +86,8 @@ include 'includes/insertUserQuestionB.php';
                         echo $row['answerB'];
                     ?>
                 </button>
-                <input type="hidden" name="questionid" class="questionId" value="<?php echo $questionId; ?>">
+                <input type="" class="questionId" value="<?php echo $questionId; ?>">
+                <input type="" class="answer" value="b">
             </form>
         </div>
 
