@@ -70,24 +70,24 @@ include 'includes/answer.php';
 
         <div class="a">
             <form method="post" action="application.php">
+                <input type="hidden" class="questionId" name="questionId" value="<?php echo $questionId; ?>">
+                <input type="hidden" class="answer"  name="answer" value="a">
                 <button type="submit" class="selector" id="button1" name="answer1">
                     <?php
-                        echo $row['answerA'];
+                    echo $row['answerA'];
                     ?>
                 </button>
-                <input type="" class="questionId" value="<?php echo $questionId; ?>">
-                <input type="" class="answer" value="a">
             </form>
         </div>
         <div class="b">
             <form method="post" action="application.php">
+                <input type="hidden" class="questionId" name="questionId" value="<?php echo $questionId; ?>">
+                <input type="hidden" class="answer" name="answer" value="b">
                 <button type="submit" class="selector" id="button2" name="answer2">
                     <?php
-                        echo $row['answerB'];
+                    echo $row['answerB'];
                     ?>
                 </button>
-                <input type="" class="questionId" value="<?php echo $questionId; ?>">
-                <input type="" class="answer" value="b">
             </form>
         </div>
 
