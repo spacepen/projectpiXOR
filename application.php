@@ -1,4 +1,3 @@
-<!--necessary for the Logout button-->
 <?php
     session_start();
     $istBenutzerAngemeldet = isset ($_SESSION['login_user']);
@@ -8,21 +7,17 @@
         $urmail= '';
     }
 
-?><!--stay angemeldet-->
+?><!--Login/Logout-->
 <?php
 
 include 'includes/insertUserQuestionA.php';
 
 
-?><!--inserts-->
-<?php
-include_once 'includes/counter.php';//das ding muss noch durchzählen
-$question = $counter;
-?>
+?><!--InsertA-->
 <?php
 include 'includes/insertUserQuestionB.php';
-?>
-<!--counter-->
+?><!--InsertB-->
+
 
 <!DOCTYPE html>
 
@@ -72,7 +67,7 @@ include 'includes/insertUserQuestionB.php';
             <p id="question">
                 <?php
                     include 'includes/dbconnect.php';
-                include 'includes/questionDB.php';
+                    include 'includes/questionDB.php';
                     echo $row['questionName'];
                 ?>
             </p>
