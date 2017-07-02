@@ -127,6 +127,9 @@ include 'includes/newUserDB.php';
 
 </main>
 
+<!-- Empty div element for style purposes for not hiding login behind footer when narrowing the page -->
+<div style="height: 120px"></div>
+
 <footer>
     <i>XOR, 2017</i>
 </footer>

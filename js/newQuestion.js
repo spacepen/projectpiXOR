@@ -18,6 +18,15 @@ $(document).ready(function(){
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
 
+            }
+        })
+
+        $.ajax({
+            url: 'api.php',
+            method: 'post',
+            data: {cmd: 'getNextQuestion'},
+            success: function (dataReceived) {
+
 
                 console.log(dataReceived);
 
@@ -38,6 +47,15 @@ $(document).ready(function(){
 
         $.ajax({
             url: 'includes/answerB.php',
+            method: 'post',
+            data: {cmd: 'getNextQuestion'},
+            success: function (dataReceived) {
+
+            }
+        })
+
+        $.ajax({
+            url: 'api.php',
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {

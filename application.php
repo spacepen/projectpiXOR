@@ -97,6 +97,9 @@
     </div>
 </main>
 
+<!-- Empty div element for style purposes for not hiding second button behind footer when narrowing the page -->
+<div style="height: 120px"></div>
+
 <footer>
     <div class="width">
 
