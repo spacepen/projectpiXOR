@@ -37,7 +37,7 @@ $(document).ready(function(){
         console.log('click');
 
         $.ajax({
-            url: 'includes/answer.php',
+            url: 'includes/answerB.php',
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
