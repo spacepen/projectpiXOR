@@ -8,12 +8,7 @@
     }
 
 ?><!--Login/Logout-->
-<?php
 
-include 'includes/answer.php';
-
-
-?><!--Answer-->
 
 <!DOCTYPE html>
 

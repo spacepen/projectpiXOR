@@ -13,7 +13,7 @@ $(document).ready(function(){
         console.log('click');
 
         $.ajax({
-            url: 'api.php',
+            url: 'includes/answer.php',
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
@@ -37,7 +37,7 @@ $(document).ready(function(){
         console.log('click');
 
         $.ajax({
-            url: 'api.php',
+            url: 'includes/answer.php',
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
