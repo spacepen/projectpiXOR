@@ -17,6 +17,7 @@ $(document).ready(function(){
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
+                console.log(dataReceived);
 
             }
         })
@@ -32,6 +33,7 @@ $(document).ready(function(){
 
                 console.log(dataReceived.questionId);
                 console.log(dataReceived.answerA);
+
             }
         })
     });
@@ -50,6 +52,7 @@ $(document).ready(function(){
             method: 'post',
             data: {cmd: 'getNextQuestion'},
             success: function (dataReceived) {
+                console.log(dataReceived);
 
             }
         })
