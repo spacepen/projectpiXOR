@@ -77,6 +77,12 @@
                     ?>
                 </button>
             </form>
+            <p><?php
+                include 'includes/answer.php';
+                echo mysqli_num_rows($result2);
+                ?>
+            </p>
+
         </div>
         <!-- Including 'ANSWER B' from database -->
         <div class="b">
@@ -89,6 +95,11 @@
                     ?>
                 </button>
             </form>
+            <p><?php
+                include 'includes/answerB.php';
+                echo mysqli_num_rows($result2);
+                ?>
+            </p>
         </div>
 
         <div>
