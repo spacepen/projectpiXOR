@@ -14,6 +14,7 @@ include 'includes/answer.php';
 
 
 ?><!--Answer-->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -25,7 +26,7 @@ include 'includes/answer.php';
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="scss/main.css" rel="stylesheet">
-    <link href="scss/anwendung.css" rel="stylesheet">
+    <link href="scss/application.css" rel="stylesheet">
     <link rel="icon" href="images/logo1.png">
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
@@ -58,6 +59,8 @@ include 'includes/answer.php';
 
 <main>
     <div class="width">
+
+        <!-- Including QUESTION from database -->
         <div class="question" >
             <p id="question">
                 <?php
@@ -68,6 +71,7 @@ include 'includes/answer.php';
             </p>
         </div>
 
+        <!-- Including 'ANSWER A' from database -->
         <div class="a">
             <form method="post" action="application.php">
                 <input type="hidden" class="questionId" name="questionId" value="<?php echo $questionId; ?>">
@@ -79,10 +83,11 @@ include 'includes/answer.php';
                 </button>
             </form>
         </div>
+        <!-- Including 'ANSWER B' from database -->
         <div class="b">
             <form method="post" action="application.php">
                 <input type="hidden" class="questionId" name="questionId" value="<?php echo $questionId; ?>">
-                <input type="hidden" class="answer" name="answer" value="b">
+                <input type="hidden" class="answer" name="answerB" value="b">
                 <button type="submit" class="selector" id="button2" name="answer2">
                     <?php
                     echo $row['answerB'];
@@ -99,11 +104,13 @@ include 'includes/answer.php';
 
 <footer>
     <div class="width">
-<!--        Displays the mail.-->
+
+        <!-- Displays the mail -->
         <div class="a" style="margin-left: -20px;">
             <p>Logged in as <b><?php echo $urmail; ?></b></p>
         </div>
-<!--        Logout Button-->
+
+        <!-- Logout Button-->
         <?php if ($istBenutzerAngemeldet):?>
             <div class = "b" style="margin-right: -20px">
                 <a href="logout.php"><button class="btn btn-default">Logout</button></a>

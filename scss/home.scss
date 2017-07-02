@@ -1,6 +1,8 @@
-$boxcolor: rgba(3,3,3,0.6);//primary color of all boxes
-$buttoncolor: #333333; //primary button font color
+$boxcolor: rgba(3,3,3,0.6); //primary color of all boxes
+$buttoncolor: #333333;      //primary button font color
 
+
+//LOGIN STYLE
 .loginbox{
   float: left;
   margin-top: 50px;
@@ -10,7 +12,8 @@ $buttoncolor: #333333; //primary button font color
   padding: 20px;
   box-shadow: 0 3px 9px rgba(0,0,0,.5);
 }
-//lightbox
+
+//LIGHTBOX STYLE
 .lightbox{
   background-color: $boxcolor;
   color: $buttoncolor;
@@ -22,13 +25,16 @@ $buttoncolor: #333333; //primary button font color
     margin-top: 3%;
   }
 }
+
 .x{
   color: rgba(255,255,255,0.9);
 }
+
 .backlight{
   background-color: rgba(255,255,255,0.02);
 }
-//eingabefelder
+
+//INPUT FIELDS
 .form-control{
   width: 200px;
 }
@@ -40,11 +46,12 @@ $buttoncolor: #333333; //primary button font color
     float: left;
     margin-top: 10px;
     width: 200px;
-  }
+}
 
 .error{
   color: red;
 }
+
 .regsuccess{
   color: greenyellow;
 }
@@ -55,7 +62,8 @@ $buttoncolor: #333333; //primary button font color
   border-radius: 0;
 }
 
-.welcome { //welcome message
+//WELCOME MESSAGE
+.welcome {
   float: left;
   font-weight: 200;
   font-size: 187%;

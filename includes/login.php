@@ -1,3 +1,6 @@
+
+<!-- USER LOGIN -->
+
 <?php
 
 include "includes/dbconnect.php";
@@ -35,9 +38,6 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
         } else {
             $ifError = true;
         }
-
-
-
 
     } else {
         $ifError = true;

@@ -1,3 +1,6 @@
+
+<!-- USER REGISTRATION -->
+
 <?php
 include "includes/dbconnect.php";
 $regsuccess=false;

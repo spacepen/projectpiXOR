@@ -5,6 +5,7 @@ $buttoncolor: #333333;
 #button1{
   visibility: visible;
 }
+
 #button2{
   visibility: visible;
 }
@@ -18,7 +19,7 @@ $buttoncolor: #333333;
   font-size: 30px;
   font-weight: lighter;
   color: $white;
-  text-shadow: 0px 2px 6px rgba(0,0,0,.5);
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
 }
 
 .selector {
@@ -36,30 +37,31 @@ $buttoncolor: #333333;
 }
 
 .selector:hover {
-  background: rgba(100,100,100,0.6);
   text-decoration: none;
   background: rgba(0,0,0,0.8);
   cursor: pointer;
   box-shadow: 0px 4px 11px rgba(0,0,0,.7);
-
-
 }
+
 #main{
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .question{
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
+
 .a{
   float: left;
 }
+
 .b{
-  float:right;
+  float: right;
 }
 
 .center{

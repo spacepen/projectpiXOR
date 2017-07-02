@@ -5,7 +5,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-transition: background 3000ms ease-in 2s;
-  /* property duration timing-function delay */
+  /* ...property duration timing-function delay... */
   -moz-transition: background 3000ms ease-in 2s;
   -o-transition: background 3000ms ease-in 2s;
   transition: background 3000ms ease-in 2s;
@@ -74,9 +74,9 @@ main {
 footer {
   background-color: rgba(255, 255, 255, 0.3);
   color: black;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@ footer {
   width: 980px; }
 
 .btn {
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #333333;
   color: white; }
 

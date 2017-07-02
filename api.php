@@ -8,11 +8,11 @@ if(!empty($_POST) && isset($_POST['cmd']) && $_POST['cmd'] == 'getNextQuestion')
 
     $userId = $_SESSION['login_userid'];
 
-    //$sql = "SELECT * FROM question WHERE questionID IS NOT IN(SELECT questionID FROM userquestion WHERE usersID='".$userId."')";
+    $sql = "SELECT * FROM question WHERE questionID IS NOT IN (SELECT questionID FROM userquestion WHERE usersID='".$userId."')";
             //|--> funktioniert irgendwie nicht...?!
 
 
-    $sql = "SELECT * FROM question"; //Testlösung
+    //$sql = "SELECT * FROM question"; //Testlösung
 
     $result = mysqli_query($pdo, $sql) or die(mysqli_error($pdo));     //$result = .... query...
     $row = mysqli_fetch_assoc($result);                                //$row = .... fetch_assoc...

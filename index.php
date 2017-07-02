@@ -21,7 +21,6 @@ include 'includes/newUserDB.php';
     <script language="javascript" type="text/javascript" src="jQuery/jQuery.js"></script>
     <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
     <script src="js/core.js"></script>
-    <script src="js/strength.js"></script>
 
 </head>
 <body>
@@ -51,7 +50,7 @@ include 'includes/newUserDB.php';
         <div class="loginbox">
             <form action="" method="POST">
                 <div class="form-group">
-                    <input type=text" class="form-control" id="email" name="email" placeholder="Email">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password">
@@ -59,70 +58,75 @@ include 'includes/newUserDB.php';
                 <button class="btn btn-default" type="submit">
                     Login
                 </button>
-                <!-- GetAccount Button Lightbox Class: button-->
+
+                <!-- GetAccount Button => Lightbox Class: button-->
                 <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal">
                     Get Account
                 </button>
             </form>
                 <?php if ($ifError && !$regsuccess && !$regfail): ?>
                     <div class="error">
-                        <p>Wrong email or password! Please try again.</p>
+                        <p>Wrong email or password! Please try again.</p> <!-- Error message if typed in wrong password or wrong email -->
                     </div>
                 <?php endif; ?>
                 <?php if ($regfail): ?>
                     <div class="error">
-                        <p>This email has already been registered.</p>
+                        <p>This email has already been registered.</p> <!-- Error message if tried to register with existing email -->
                     </div>
                 <?php endif ?>
 
                 <?php if ($passfail): ?>
                     <div class="error">
-                        <p>Passwords are not identical. Please try to register again.</p>
+                        <p>Passwords are not identical. Please try to register again.</p> <!-- Error message if passwords do not match in registration -->
                     </div>
                 <?php endif ?>
 
                 <?php if ($regsuccess): ?>
                     <div class="regsuccess">
-                        <p>Registration was successful!</p>
+                        <p>Registration was successful!</p> <!-- Success message if registration did not have any errors -->
                     </div>
                 <?php endif; ?>
 
         </div>
 
+        <!-- Welcome text next to login -->
         <div class="welcome loginbox x">
             <p>Welcome to <b>xor</b>!</p>
             <p>A game to choose<br> your preferences!</p>
         </div>
 
-            <!-- Lightbox -->
-            <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <!--Class: Lightbox-->
-                    <div class="modal-content lightbox">
-                        <div class="modal-header">
-                            <button type="button" class="close x" data-dismiss="modal" aria-label="Close"><span
-                                        aria-hidden="true">&times;</span></button>
+        <!-- Lightbox for registration -->
+        <div class="modal fade backlight" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <!--Class: Lightbox-->
+                <div class="modal-content lightbox">
+                    <div class="modal-header">
+                        <!-- Close Button -->
+                        <button type="button" class="close x" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                             <h4 class="modal-title x" id="myModalLabel">Get Account</h4>
-                        </div>
-                        <form class="input-style" action="" method="post">
-                            <b class="x">Email:</b><br>
-                            <input type="email" size="40" maxlength="250" class="form-control" name="email"><br><br>
-
-                            <b class="x">Your password:</b><br>
-                            <input type="password" size="40" maxlength="250" class="form-control" name="passwort" ><br>
-
-                            <b class="x">Retype password:</b><br>
-                            <input type="password" size="40" maxlength="250" class="form-control" name="passwort2"><br><br>
-
-                            <input type="submit" class="btn btn-default" value="Registrieren">
-                        </form>
-
                     </div>
+                    <form class="input-style" action="" method="post">
+                        <b class="x">Email:</b><br>
+                        <input type="email" size="40" maxlength="250" class="form-control" name="email"><br><br>
+
+                        <b class="x">Your password:</b><br>
+                        <input type="password" size="40" maxlength="250" class="form-control" name="passwort" ><br>
+
+                        <b class="x">Retype password:</b><br>
+                        <input type="password" size="40" maxlength="250" class="form-control" name="passwort2"><br><br>
+
+                        <input type="submit" class="btn btn-default" value="Registrieren">
+                    </form>
                 </div>
             </div>
         </div>
 
+    </div>
+
 </main>
+
 <footer>
     <i>XOR, 2017</i>
 </footer>

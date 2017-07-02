@@ -1,10 +1,9 @@
-$b: 980px; //width der Seite
-$boxcolor: rgba(3,3,3,0.5);//primary color of all boxes
+$b: 980px; //WIDTH of the website
+$boxcolor: rgba(3,3,3,0.5); //PRIMARY COLOR of all boxes
 $buttoncolor: #333333;
 
 
-body{
-  //background-image: url(/projectpiXOR/pixor/images/background.jpg), url(/projectpiXOR/pixor/images/background2.jpg);
+body {
   background-size: cover;
   background: no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -14,7 +13,7 @@ body{
 
   // Fade IN & OUT settings for background images:
 
-  -webkit-transition: background 3000ms ease-in 2s; /* property duration timing-function delay */
+  -webkit-transition: background 3000ms ease-in 2s; /* ...property duration timing-function delay... */
   -moz-transition: background 3000ms ease-in 2s;
   -o-transition: background 3000ms ease-in 2s;
   transition: background 3000ms ease-in 2s;
@@ -39,6 +38,8 @@ body{
   transition-timing-function: ease-in;
   transition-delay: 100ms;
 
+
+  // BOUNCING EFFECT for hidden (PI)xor icon
 
   @keyframes bounce {
     0%, 20%, 60%, 100% {
@@ -67,7 +68,7 @@ header{
   box-shadow: 0px 3px 9px rgba(0,0,0,.5);
 }
 
-//social media buttons
+//BUTTONS: Social Media
 .socialmedia{
   float: right;
   padding-right: 5px;
@@ -81,7 +82,8 @@ header{
 .social:hover{
   opacity: 0.2;
 }
-//logo
+
+//LOGO
 .pixor{
   opacity: 0;
 }
@@ -99,13 +101,12 @@ main{
   justify-content: center;
 }
 
-
 footer{
   background-color: rgba(255,255,255,0.3);
   color: black;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -114,13 +115,13 @@ footer{
   box-shadow: 9px 3px 9px 9px rgba(0,0,0,.5);
 }
 
-//general
+//general width
 .width{
   width:$b;
 }
 
 .btn{
-  border-radius: 0px;
+  border-radius: 0;
   background-color: $buttoncolor;
   color:white;
 }
