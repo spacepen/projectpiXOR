@@ -71,7 +71,7 @@ include 'includes/answer.php';
         <div class="a">
             <form method="post" action="application.php">
                 <input type="hidden" class="questionId" name="questionId" value="<?php echo $questionId; ?>">
-                <input type="hidden" class="answer"  name="answer" value="a">
+                <input type="hidden" class="answer"  name="answerA" value="a">
                 <button type="submit" class="selector" id="button1" name="answer1">
                     <?php
                     echo $row['answerA'];
