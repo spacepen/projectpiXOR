@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Erstellungszeit: 30. Jun 2017 um 23:30
+-- Erstellungszeit: 02. Jul 2017 um 23:43
 -- Server-Version: 10.1.22-MariaDB
 -- PHP-Version: 7.1.4
 
@@ -58,7 +58,7 @@ INSERT INTO `question` (`questionID`, `questionName`, `answerA`, `answerB`) VALU
 --
 
 CREATE TABLE `userquestion` (
-  `selection` tinyint(1) NOT NULL,
+  `selection` int(1) NOT NULL,
   `usersID` int(11) NOT NULL,
   `questionID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -74,15 +74,6 @@ CREATE TABLE `users` (
   `email` varchar(100) CHARACTER SET latin1 NOT NULL,
   `password` varchar(100) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Daten für Tabelle `users`
---
-
-INSERT INTO `users` (`usersID`, `email`, `password`) VALUES
-(1, 'max@mustermann.at', '123456'),
-(2, 'alexandra.kaltschmid@gmx.at', 'lol'),
-(6, '123@123.de', '$2y$10$YEFLOr6dIckb9724amoXT.ZMeZl2WLmjYeu1MWik3jM6XkfBEv1Ua');
 
 --
 -- Indizes der exportierten Tabellen
@@ -121,7 +112,7 @@ ALTER TABLE `question`
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `usersID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `usersID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints der exportierten Tabellen
 --
